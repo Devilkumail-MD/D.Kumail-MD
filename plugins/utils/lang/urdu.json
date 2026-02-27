@@ -1,0 +1,184 @@
+{
+  "STRINGS": {
+    "converters": {
+      "STICKER_DESC": "Sticker banata hai. Media pe reply karo.",
+      "STICKER_NEED_REPLY": "_Photo ya chhoti video pe reply karo!_",
+      "MP3_DESC": "Reply ki gayi media ko mp3 mein tabdeel karta hai",
+      "MP3_NEED_REPLY:": "_Audio ya video pe reply karo!_",
+      "BASS_DESC:": "Audio ka bass barhata hai. .bass 20",
+      "BASS_NEED_REPLY:": "_Audio pe reply karo!_",
+      "TTS_DESC": "Text ko speech mein tabdeel karta hai.",
+      "TTS_NEED_REPLY": "Text zaruri hai!",
+      "TTS_ERROR": "Speech mein tabdeel karne mein nakaam. Apni request check karo!",
+      "PHOTO_DESC": "Sticker ko photo mein tabdeel karta hai",
+      "PHOTO_NEED_REPLY": "_Non animated sticker pe reply karo!_"
+    },
+    "external_plugin": {
+      "INSTALL_DESC": "Bahari plugin install karta hai.",
+      "NEED_URL": "_URL chahiye! Misal:_ .install https://gist.git....",
+      "INVALID_URL": "_Galat URL!_",
+      "INVALID_PLUGIN": "_Plugin mein kharabi!_\n",
+      "INSTALLED": "_Install ho gaya {} ✅_",
+      "PLUGIN_DESC": "Apke install kiye huay plugins dikhata hai.",
+      "INSTALLED_PLUGINS": "_Kul bahari plugins:_\n",
+      "NO_PLUGIN": "_Koi plugin nahi mila!_",
+      "REMOVE_DESC": "Plugin hatata hai.",
+      "NEED_PLUGIN": "_Plugin ka naam do! Misal: .remove news_",
+      "PLUGIN_NOT_FOUND": "_Aisa koi plugin install nahi!_",
+      "PLUGIN_UPDATED": "_Plugin '{}' update ho gaya, restart ho raha hai..!_",
+      "DELETED": "_Delete ho gaya: '{}'। Effect ke liye reboot karo_"
+    },
+    "group": {
+      "KICK_DESC": "Group se member nikalta hai.",
+      "NOT_ADMIN": "Main admin nahi hoon",
+      "ISADMIN": "Ye banda admin hai",
+      "KICKED": "_Nikal diya gaya!_",
+      "NEED_USER": "_Member chahiye_",
+      "ADD_DESC": "Group mein member shamil karta hai.",
+      "ADDED": "_Group mein shamil kar diya gaya_",
+      "ALREADY_PROMOTED": "_Ye banda pehle se admin hai_",
+      "PROMOTED": "_Ab admin ban gaya!_",
+      "PROMOTE_DESC": "Kisi ko admin banata hai.",
+      "LEAVE_DESC": "Group chhod deta hai.",
+      "DEMOTE_DESC": "Admin se hatata hai.",
+      "ALREADY_NOT_ADMIN": "Ye banda admin nahi hai",
+      "DEMOTED": " _Ab admin nahi raha!_",
+      "MUTE_DESC": "Group mute karta hai. Sirf admin message bhej sakte hain.",
+      "MUTED": "_Group mute ho gaya!_",
+      "UNMUTE_DESC": "Group unmute karta hai",
+      "UNMUTED": "_Group unmute ho gaya!_",
+      "REVOKE_DESC": "Group ka link reset karta hai.",
+      "REVOKED": "_Group link reset ho gaya!_",
+      "TAGALL_DESC": "Group ke tamam members ko tag karta hai.",
+      "INVITE_DESC": "Group ka link deta hai.",
+      "INVITE": "_Invite link:_",
+      "JID_DESC": "Chat/user ki JID deta hai.",
+      "GROUP_COMMAND": "_Ye group command hai!_",
+      "WARN_DESC": "Warning deta hai. Had puri hone pe nikal deta hai",
+      "WARNING": "     *⚠️ WARNING ⚠️*",
+      "USER": "_User:_ {}",
+      "REMAINING": "_Baqi: {}_",
+      "REASON": "_Wajah: {}_",
+      "WARN_RESET": "_Warnings reset, {} mazeed baqi_ {}",
+      "WARN_OVER": "_Zyada se zyada warnings ({}) ho gayin, {} nikal diya gaya!_"
+    },
+    "afk": {
+      "AFK_DESC": "Apko AFK karta hai - keyboard se door.",
+      "IM_AFK": "Main abhi AFK hoon!",
+      "IM_AFK_NOMD": "Main abhi AFK hoon!",
+      "REASON": "Wajah",
+      "LAST_SEEN": "Aakhri baar online",
+      "IM_NOT_AFK": "Main ab AFK nahi hoon!",
+      "AFK_TEXT": "Mera malik abhi yahan nahi hai.",
+      "AFK_TEXT_NOMD": "Main ek bot hoon!",
+      "HOUR": "ghanta",
+      "MINUTE": "minute",
+      "SECOND": "second"
+    },
+    "media": {
+      "TRIM_DESC": "Diye gaye seconds ke saath audio ya video trim karta hai",
+      "TRIM_USE": ".trim 60,120",
+      "TRIM_NEED": "_Galat format!_\n _.trim 10,30_",
+      "TRIM_VIDEO_NEED": "_Galat format!_ \n_.trim 5,10_\n_.trim 1:05,1:20_",
+      "TRIM_NEED_REPLY": "_Audio ya video pe reply karo_",
+      "AVMIX_DESC": "_Audio aur video mix karta hai_",
+      "AVMIX_NEED_FILES": "_Mix karne ke liye audio aur video pe reply karo!_",
+      "AVMIX_AUDIO_ADDED": "_Audio save ho gayi_",
+      "AVMIX_VIDEO_ADDED": "_Video save ho gayi_"
+    },
+    "heroku": {
+      "HEROKU_DESC": "Heroku app ki details dikhata hai.",
+      "NO_API_KEY": "Heroku API Key nahi mili. Set karo!",
+      "NO_HEROKU": "Heroku pe nahi chal raha."
+    },
+    "manage": {
+      "SETVAR_DESC": "Bot variable set karta hai.",
+      "NEED_KEY_VALUE": "_Key aur value do! Misal: .setvar KEY:VALUE_",
+      "SET_VAR": "_Set ho gaya: {} = {}_",
+      "GETVAR_DESC": "Bot variables dikhata hai.",
+      "DELVAR_DESC": "Bot variable delete karta hai.",
+      "DELETED_VAR": "_Delete ho gaya: {}_",
+      "VAR_NOT_FOUND": "_Variable nahi mila!_",
+      "BLOCK_DESC": "User block karta hai.",
+      "BLOCKED": "_Block ho gaya!_",
+      "UNBLOCK_DESC": "User unblock karta hai.",
+      "UNBLOCKED": "_Unblock ho gaya!_",
+      "NEED_TARGET": "_User tag karo ya reply karo_"
+    },
+    "filter": {
+      "FILTER_DESC": "Filter lagata hai.",
+      "FILTERS_DESC": "Tamam filters dikhata hai.",
+      "DELFILTER_DESC": "Filter hatata hai.",
+      "NO_FILTERS": "_Koi filter nahi!_",
+      "FILTER_SET": "_Filter set ho gaya: {}_",
+      "FILTER_DELETED": "_Filter hata diya: {}_",
+      "FILTER_NOT_FOUND": "_Filter nahi mila!_"
+    },
+    "warn": {
+      "WARN_DESC": "User ko warning deta hai.",
+      "WARNED": "_⚠️ Warning de di gayi!_",
+      "WARN_LIMIT": "_Warning had puri! Nikal diya gaya!_",
+      "WARN_RESET_DESC": "Warnings reset karta hai.",
+      "WARN_RESET": "_Warnings reset ho gayin!_",
+      "NO_WARNS": "_Koi warning nahi!_"
+    },
+    "welcome": {
+      "WELCOME_DESC": "Welcome message set karta hai.",
+      "GOODBYE_DESC": "Alvida message set karta hai.",
+      "WELCOME_SET": "_Welcome message set ho gaya!_",
+      "GOODBYE_SET": "_Alvida message set ho gaya!_",
+      "WELCOME_OFF": "_Welcome band!_",
+      "GOODBYE_OFF": "_Alvida band!_",
+      "NOT_SET_WELCOME": "_Koi welcome message set nahi! Wiki check karo: https://github.com/Devilkumail-MD/D.Kumail-MD/wiki/Welcome_"
+    },
+    "misc": {
+      "WIKI_DESC": "Wikipedia pe search karta hai.",
+      "IMG_DESC": "Google se images search karta hai.",
+      "IMG": "_{} results upload ho rahe hain {} ke liye_",
+      "MATCHING_SONGS": "YouTube se milte julte gaane",
+      "YTS_DESC": "YouTube se videos search karta hai",
+      "YTS_RESULTS": "YouTube se search ke nataij",
+      "YTV_DESC": "YouTube videos available quality mein download karta hai"
+    },
+    "sticker": {
+      "STICKER_DESC": "Sticker banata hai. Media pe reply karo.",
+      "NEED_REPLY": "Photo ya chhoti video pe reply karo"
+    },
+    "system_stats": {
+      "ALIVE_DESC": "Check karta hai ke bot kaam kar raha hai ya nahi",
+      "SYSD_DESC": "System ki details dikhata hai."
+    },
+    "tagall": {
+      "TAGALL_DESC": "Group ke sab members ko tag karta hai.",
+      "ADMIN": "Main admin nahi hoon"
+    },
+    "updater": {
+      "UPDATER_DESC": "Bot updates check karta hai.",
+      "UPDATE": "Pehle se up to date hai",
+      "UPDATE_START_DESC": "Bot update karta hai.",
+      "UPDATING": "_Build shuru ho rahi hai_",
+      "INVALID_HEROKU": "Heroku app naam ya API Key galat hai!",
+      "UPDATED": "Build mukammal ho gayi",
+      "AFTER_UPDATE": "Restart ho raha hai"
+    },
+    "ping": {
+      "PING_DESC": "Bot ki speed napta hai.",
+      "URL": "Lambe link ko chhota karo."
+    },
+    "instagram": {
+      "NEED_WORD": "Kisi Instagram account ka username do.",
+      "USAGE": ".insta <userName>",
+      "DESC": "Instagram se user ki info lata hai",
+      "LOADING": "User ka data laya ja raha hai.. intezar karo.",
+      "USERNAME": "Username",
+      "NAME": "Naam",
+      "BIO": "Bio",
+      "FOLLOWERS": "Followers",
+      "FOLLOWS": "Following",
+      "ACCOUNT": "Account privacy",
+      "PUBLIC": "Public",
+      "HIDDEN": "Private",
+      "NOT_FOUND": "User nahi mila: "
+    }
+  }
+}
