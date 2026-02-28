@@ -36,25 +36,42 @@ try {
       console.log(`- [${this.sessionId}] Auth state empty after fetch, loading from database...`);
       try {
         const { sequelize } = require("./config");
-        const { QueryTypes } = require("sequelize");
-
         const keysToTry = [`creds-${this.sessionId}`, `${this.sessionId}-creds`, "creds"];
         let credsData = null;
 
+        const tables = await sequelize.query("SELECT name FROM sqlite_master WHERE type='table'", { type: sequelize.QueryTypes ? sequelize.QueryTypes.SELECT : "SELECT" });
+        const tableNames = tables.map(t => t.name || t.tbl_name);
+        console.log(`  ? Tables in DB: ${tableNames.join(", ")}`);
+
+        const tableName = tableNames.find(t => t.toLowerCase().includes("whatsapp")) || "WhatsappSessions";
+        console.log(`  ? Using table: ${tableName}`);
+
         for (const key of keysToTry) {
-          const rows = await sequelize.query(
-            'SELECT "sessionData" FROM "WhatsappSessions" WHERE "sessionId" = :sid LIMIT 1',
-            { replacements: { sid: key }, type: QueryTypes.SELECT }
-          );
-          if (rows.length > 0 && rows[0].sessionData) {
-            try {
-              credsData = typeof rows[0].sessionData === "string" ? JSON.parse(rows[0].sessionData) : rows[0].sessionData;
-            } catch { credsData = null; }
-            if (credsData && typeof credsData === "object" && Object.keys(credsData).length > 0) {
-              console.log(`  ✓ Found creds in DB key: ${key}`);
-              break;
+          console.log(`  ? Trying DB key: ${key}`);
+          try {
+            const rows = await sequelize.query(
+              `SELECT sessionData FROM "${tableName}" WHERE sessionId = ?`,
+              { replacements: [key], type: "SELECT" }
+            );
+            const resultRows = Array.isArray(rows[0]) ? rows[0] : rows;
+            if (resultRows.length > 0 && resultRows[0].sessionData) {
+              console.log(`  ? Found row, data type: ${typeof resultRows[0].sessionData}, preview: ${String(resultRows[0].sessionData).substring(0, 80)}`);
+              try {
+                credsData = typeof resultRows[0].sessionData === "string" ? JSON.parse(resultRows[0].sessionData) : resultRows[0].sessionData;
+              } catch (parseErr) {
+                console.log(`  ? Parse error: ${parseErr.message}`);
+                credsData = null;
+              }
+              if (credsData && typeof credsData === "object" && Object.keys(credsData).length > 0) {
+                console.log(`  ✓ Found creds in DB key: ${key} (${Object.keys(credsData).length} keys)`);
+                break;
+              }
+              credsData = null;
+            } else {
+              console.log(`  ? Key ${key}: no data (${resultRows.length} rows)`);
             }
-            credsData = null;
+          } catch (qErr) {
+            console.log(`  ? Query error for ${key}: ${qErr.message}`);
           }
         }
 
@@ -119,7 +136,6 @@ async function main() {
     console.log("- Database initialized");
     logger.info("Database initialized successfully.");
 
-    // Debug: dump session keys in database
     try {
       const { WhatsappSession } = require("./core/database");
       const allSessions = await WhatsappSession.findAll({ attributes: ['sessionId'] });
